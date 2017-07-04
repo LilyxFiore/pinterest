@@ -181,11 +181,12 @@
   display: inline-block; }
 
 input[type=text] {
-  width: 160px;
-  border: 2px solid #ccc;
+  width: 900px;
+  height: 35px;
+  border: 2px solid #EFEFEF;
   border-radius: 4px;
   font-size: 16px;
-  background-color: white;
+  background-color: #EFEFEF;
   background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png");
   background-position: 10px 10px;
   background-repeat: no-repeat;
@@ -194,11 +195,20 @@ input[type=text] {
   transition: width 0.4s ease-in-out; }
 
 input[type=text]:focus {
-  width: 100%; }
+  outline: 0px; }
 
+.ulPin {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+/*input[type=text]:focus {
+    width: 100%;
+}*/
 hr {
   height: 1px;
   background-color: #EFEFEF;
-  border: none; }
+  border: none;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */

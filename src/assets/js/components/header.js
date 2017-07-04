@@ -28,7 +28,6 @@ const Header = () => {
    ulPin.append(liPin3);
    ulPin.append(liPin4);
    ulPin.append(liPin5);
-   ulPin.append(hr);
    liPin1.append(aPin1);
    liPin2.append(inputPin);
    liPin3.append(aPin2);
@@ -41,6 +40,7 @@ const Header = () => {
    aPin3.append(pin3);
    aPin4.append(pin4);
    nav.append(ulPin);
+   nav.append(hr);
    header.append(nav);
  return header;
 }
