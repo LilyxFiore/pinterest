@@ -4,6 +4,7 @@ $gris-soft-search: whitesmoke;
 $gris-hard : dimgray;
 $background : white;
 $red-type : firebrick;
+$background-button: #F0F0F0;
 
 /* GRILLAS */
 
@@ -24,4 +25,22 @@ $breakpoints : (xs : 0, sm : 768px, md : 992px, lg : 1200px );
 }
 @each $name, $width in $breakpoints {
   @include column($name, $width);
+}
+
+/*HEADER*/
+
+.nav{
+  .ulPin{
+    .liPin{
+      list-style: none;
+    .aPin{
+      text-decoration: none;
+      color: $gris-soft-search;
+        }
+    }
+  }
+}
+
+.liPin:hover{
+  background-color: $background-button;
 }
