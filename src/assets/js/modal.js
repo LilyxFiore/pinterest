@@ -15,19 +15,19 @@ const Modal = () => {
     contentIcons.append(iconShare);
     contentIcons.append(iconCheck);
     contentIcons.append(iconMore);
-    headerModal.append(contentIcons);
-    headerModal.append(save);
     
-    contData.append();  
+    headerModal.append();
+    contData.append();
     contenedor.append(contData);
             
     return contenedor;
 }
 
+
 $( _=>{
-    /*MODAL VIEW*/
+   /*MODAL VIEW*/
     const modal = $('#modal');
-    render(modal);
+    
     modal.hide();
     
     $('.content img').on('click', (e)=>{

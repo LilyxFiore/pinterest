@@ -1,1 +1,84 @@
-$dark: black;
+/*COLOR FONT*/
+$color--black:#555555;
+$color--white:#E9D5D7;
+$color--icons:#B5B5B5; 
+
+/* BUTTON*/
+$bg__btn--guardar: #B7071B;
+$bg__btn--default:#E3E3E3;
+
+/*ICONS*/
+$bg__color--hover:#F0F0F0;
+
+/*TAMAÑOS MODAL*/
+$max-width:100%;
+$max-height:100vh;
+
+/*MODAL IMAGES*/
+
+@mixin buttons($bg,$pad,$color,$font--size,$porc,$rad){
+  background: $bg;
+  padding: $pad;
+  font-size: $font--size;
+  color: $color;
+  font-weight: bold;
+  border: none;
+  border-radius: $rad;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background: darken($bg,$porc);
+    transition: all 0.3s ease;
+  }/*
+  &:active {
+    background:darken($bg,25%);
+    border: 2px solid $color--black;
+  }*/ 
+}
+
+/*Reutilizables para bottones y iconos*/
+/*EH creado un minifado que aplica a todos los botones*/
+.btn{
+    &__guardar{
+        @include buttons($bg__btn--guardar,9px 12px,$color--white,1em,4%,10px);
+    }
+    &__secondary{
+        @include buttons($bg__btn--default,9px 12px,$color--black,1em,6%,10px);
+    }
+    &__icons{
+        @include buttons(white,15px 20px,$color--icons,1em,10%,50%);
+    }
+    &--pad{
+       margin-left: 5px; 
+    }
+}
+
+
+.flex{
+    display: -webkit-flex;
+    display: flex;
+    &__justify-between{
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+    &__justify-spacearound{
+        -webkit-box-pack: justify;
+        justify-content: space-around;
+    }
+}
+
+/*MEDIA QUERY MOBILE VERSION*/
+
+.modal{
+    width: 100%;
+    height: auto;
+    background: $color--black;
+}
+
+@media (min-width:360px){
+    .sm-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
