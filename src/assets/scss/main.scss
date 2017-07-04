@@ -4,7 +4,10 @@ $gris-soft-search: whitesmoke;
 $gris-hard : dimgray;
 $background : white;
 $red-type : firebrick;
+
+/*COLORES DANA*/
 $background-button: #F0F0F0;
+$text-inicio: #B7B7B7;
 
 /* GRILLAS */
 
@@ -27,20 +30,51 @@ $breakpoints : (xs : 0, sm : 768px, md : 992px, lg : 1200px );
   @include column($name, $width);
 }
 
+/* BODY */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*HEADER*/
 
 .nav{
   .ulPin{
-    .liPin{
+    .liPin1{
       list-style: none;
+      display: inline-block;
     .aPin{
       text-decoration: none;
-      color: $gris-soft-search;
+      color: $text-inicio;
         }
     }
   }
 }
 
-.liPin:hover{
+.liPin2{
+  display: inline-block;
+}
+.liPin1:hover{
   background-color: $background-button;
+  border-radius: 30%;
+}
+
+input[type=text] {
+    width: 160px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
 }
