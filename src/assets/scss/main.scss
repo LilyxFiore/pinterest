@@ -8,6 +8,7 @@ $red-type : firebrick;
 /*COLORES DANA*/
 $background-button: #F0F0F0;
 $text-inicio: #B7B7B7;
+$background-input-hr: #EFEFEF;
 
 /* GRILLAS */
 
@@ -40,41 +41,62 @@ $breakpoints : (xs : 0, sm : 768px, md : 992px, lg : 1200px );
 
 /*HEADER*/
 
-.nav{
-  .ulPin{
-    .liPin1{
-      list-style: none;
-      display: inline-block;
-    .aPin{
-      text-decoration: none;
-      color: $text-inicio;
-        }
-    }
-  }
+.liPin1{
+  list-style: none;
+  display: inline-block;
+
 }
 
-.liPin2{
-  display: inline-block;
-}
 .liPin1:hover{
   background-color: $background-button;
   border-radius: 30%;
 }
 
+.aPin1{
+  text-decoration: none;
+  color: $text-inicio;
+}
+
+.aPin2{
+  text-decoration: none;
+  color: $text-inicio;
+}
+
+.liPin2{
+  display: inline-block;
+}
+
+.liPin3{
+  display: inline-block;
+}
+
+.liPin4{
+  display: inline-block;
+}
+
+.liPin5{
+  display: inline-block;
+}
 input[type=text] {
     width: 160px;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 10px 20px 10px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
 
 input[type=text]:focus {
     width: 100%;
+}
+
+hr{
+  height: 1px;
+  background-color: $background-input-hr;
+  border: none;
 }
