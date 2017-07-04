@@ -14,7 +14,8 @@ var paths = {
   html: "**/*.html",
   sass: "scss/**/*.scss",
   mainSass: "scss/main.scss",
-  mainJS: "js/app.js"
+  mainJS: "js/app.js",
+  img: "img/"
 };
 
 var sources = {
@@ -23,7 +24,8 @@ var sources = {
   sass: paths.assets + paths.sass,
   js: config.source + paths.js,
   rootSass: config.source + paths.assets + paths.mainSass,
-  rootJS: config.source + paths.assets + paths.mainJS
+  rootJS: config.source + paths.assets + paths.mainJS,
+  img:  config.source + paths.img
 };
 
 gulp.task('html', ()=>{
