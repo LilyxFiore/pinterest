@@ -152,14 +152,17 @@
   box-sizing: border-box; }
 
 /*HEADER*/
+.nav {
+  width: 100%; }
+
 .liPin1 {
   list-style: none;
   display: inline-block; }
 
-a:hover {
+img:hover {
   background-color: #F0F0F0;
   border-radius: 50%;
-  padding: 30px 70px; }
+  padding: 20px 20px 20px 20px; }
 
 .aPin1 {
   text-decoration: none;
@@ -170,7 +173,8 @@ a:hover {
   color: #B7B7B7; }
 
 .liPin2 {
-  display: inline-block; }
+  display: inline-block;
+  width: 200%; }
 
 .liPin3 {
   display: inline-block; }
@@ -182,7 +186,6 @@ a:hover {
   display: inline-block; }
 
 input[type=text] {
-  width: 900px;
   height: 35px;
   border: 2px solid #EFEFEF;
   border-radius: 4px;
@@ -202,7 +205,7 @@ input[type=text]:focus {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 10px; }
+  margin-top: 11px; }
 
 /*input[type=text]:focus {
     width: 100%;
@@ -211,6 +214,32 @@ hr {
   height: 1px;
   background-color: #EFEFEF;
   border: none;
-  margin-top: 10px; }
+  margin-top: 10px;
+  width: 100%; }
+
+@media (min-width: 0) {
+  input {
+    width: 80%; } }
+@media (min-width: 320px) {
+  input {
+    width: 100%; } }
+@media (min-width: 360px) {
+  input {
+    width: 100%; } }
+@media (min-width: 414px) {
+  input {
+    width: 100%; } }
+@media (min-width: 768px) {
+  input {
+    width: 100%; } }
+@media (min-width: 992px) {
+  input {
+    width: 100%; } }
+@media (min-width: 1000px) {
+  input {
+    width: 100%; } }
+@media (min-width: 1200px) {
+  input {
+    width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

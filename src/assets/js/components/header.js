@@ -2,7 +2,7 @@
 
 const Header = () => {
   const header      = $('<header></header>');
-  const nav         = $('<nav>',{class:'nav'});
+  const nav         = $('<nav>',{class:'nav column-md-12'});
   const ulPin       = $('<ul>',{class:'ulPin'});
   const liPin1      = $('<li>',{class:'liPin1'});
   const liPin2      = $('<li>',{class:'liPin2'});
@@ -17,7 +17,7 @@ const Header = () => {
   const pin2        = $('<img>',{src:'images/icon-arrow.png',style:'width:30px; height:30px',class:'pin2'});
   const pin3        = $('<img>',{src:'images/icon-profile.png',style:'width:30px; height:30px',class:'pin3'});
   const pin4        = $('<img>',{src:'images/message.png',style:'width:30px; height:30px',class:'pin4'})
-  const inputPin    = $('<input>',{type:'text',placeholder:'Buscar'});
+  const inputPin    = $('<input>',{type:'text',placeholder:'Buscar',class:''});
   const hr          = $('<hr>',{class:'hr'});
 
 

@@ -41,16 +41,19 @@ $breakpoints : (xs : 0, sm : 768px, md : 992px, lg : 1200px );
 
 /*HEADER*/
 
+.nav{
+  width: 100%;
+}
+
 .liPin1{
   list-style: none;
   display: inline-block;
-
 }
 
-a:hover{
+img:hover{
   background-color: $background-button;
-  border-radius: 80%;
-  padding: 30px 170px;
+  border-radius: 50% ;
+  padding: 20px 20px 20px 20px;
 }
 
 .aPin1{
@@ -65,6 +68,7 @@ a:hover{
 
 .liPin2{
   display: inline-block;
+  width: 200%;
 }
 
 .liPin3{
@@ -79,7 +83,7 @@ a:hover{
   display: inline-block;
 }
 input[type=text] {
-    width: 900px;
+
     height: 35px;
     border: 2px solid $background-input-hr;
     border-radius: 4px;
@@ -101,7 +105,7 @@ input[type=text]:focus {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 11px;
 }
 
 /*input[type=text]:focus {
@@ -113,4 +117,55 @@ hr{
   background-color: $background-input-hr;
   border: none;
   margin-top: 10px;
+  width: 100%;
+}
+
+@media (min-width: 0){
+  input{
+    width: 80%;
+  }
+}
+
+@media (min-width: 320px){
+  input{
+    width: 100%;
+  }
+}
+
+@media (min-width: 360px){
+  input{
+    width: 100%;
+  }
+}
+
+@media (min-width: 414px){
+  input{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px){
+  input{
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px){
+  input{
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px){
+  input{
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px){
+  input{
+    width: 100%;
+
+  }
+
 }
