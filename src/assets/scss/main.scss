@@ -23,6 +23,7 @@ $max-height:100vh;
     padding: 0;
     margin: 0;
 }
+
 @mixin buttons($bg,$pad,$color,$font--size,$porc,$rad){
   background: $bg;
   padding: $pad;
@@ -47,7 +48,7 @@ $max-height:100vh;
 /*EH creado un minifado que aplica a todos los botones*/
 .btn{
     &__guardar{
-        @include buttons($bg__btn--guardar,9px 12px,$color--white,1em,4%,10px);
+        @include buttons($bg__btn--guardar,10px 15px,$color--white,1em,4%,10px);
     }
     &__secondary{
         @include buttons($bg__btn--default,9px 12px,$color--black,1em,6%,10px);
@@ -98,6 +99,7 @@ $max-height:100vh;
         padding: 35px 35px;
         &--button{
             left: auto;
+            right: 0px;
         }
     }
     &__close{
@@ -106,5 +108,16 @@ $max-height:100vh;
         padding: 50px;
         top: 50px;
         right: 50px;
+    }
+    &__note{
+        font-weight: 800,
+    }
+    &__pin{
+        width: 100%;
+        height: auto;
+        &--imagen{
+            width: 100%;
+            height: auto;
+        }
     }
 }
