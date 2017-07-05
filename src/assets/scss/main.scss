@@ -147,25 +147,34 @@ hr{
 @media (min-width: 768px){
   input{
     width: 100%;
+
   }
+
 }
 
 @media (min-width: 992px){
   input{
     width: 100%;
+
   }
+
 }
 
 @media (min-width: 1000px){
   input{
     width: 100%;
+
   }
+
+
 }
 
 @media (min-width: 1200px){
   input{
-    width: 100%;
-
+    width: 98%;
   }
-
+  .liPin1{
+    margin-left: 1%;
+    margin-right: 1%;
+  }
 }

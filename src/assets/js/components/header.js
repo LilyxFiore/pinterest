@@ -19,6 +19,7 @@ const Header = () => {
   const pin4        = $('<img>',{src:'images/message.png',style:'width:30px; height:30px',class:'pin4'})
   const inputPin    = $('<input>',{type:'text',placeholder:'Buscar',class:''});
   const hr          = $('<hr>',{class:'hr'});
+ 
 
 
    ulPin.append(liPin1);
