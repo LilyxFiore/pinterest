@@ -3,6 +3,8 @@ $color--black:#555555;
 $color--white:#E9D5D7;
 $color--icons:#B5B5B5; 
 
+$bg__modal: #EEEEEE;
+$bg__modal--content:#ffffff;
 /* BUTTON*/
 $bg__btn--guardar: #B7071B;
 $bg__btn--default:#E3E3E3;
@@ -16,6 +18,11 @@ $max-height:100vh;
 
 /*MODAL IMAGES*/
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 @mixin buttons($bg,$pad,$color,$font--size,$porc,$rad){
   background: $bg;
   padding: $pad;
@@ -46,7 +53,7 @@ $max-height:100vh;
         @include buttons($bg__btn--default,9px 12px,$color--black,1em,6%,10px);
     }
     &__icons{
-        @include buttons(white,15px 20px,$color--icons,1em,10%,50%);
+        @include buttons(white,15px 20px,$color--icons,1.5em,10%,50%);
     }
     &--pad{
        margin-left: 5px; 
@@ -55,7 +62,8 @@ $max-height:100vh;
 
 
 .flex{
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     &__justify-between{
         -webkit-box-pack: justify;
@@ -65,20 +73,38 @@ $max-height:100vh;
         -webkit-box-pack: justify;
         justify-content: space-around;
     }
+    &__justify-center{
+       -webkit-box-pack: justify;
+        justify-content: center; 
+    }
 }
 
 /*MEDIA QUERY MOBILE VERSION*/
 
 .modal{
     width: 100%;
-    height: auto;
-    background: $color--black;
-}
-
-@media (min-width:360px){
-    .sm-flex {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+    height: 100vh;
+    background: $bg__modal;
+    z-index: 1000;
+    position: fixed;
+    &__contentModal{
+        background: $bg__modal--content;
+        width: 70%;
+        flex-direction: column;
+        padding: 35px 35px;
+    }
+    &__header{
+        width: 100%;
+        padding: 35px 35px;
+        &--button{
+            left: auto;
+        }
+    }
+    &__close{
+        font-size: 2em;
+        position: fixed;
+        padding: 50px;
+        top: 50px;
+        right: 50px;
     }
 }
