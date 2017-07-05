@@ -14,11 +14,9 @@ const Header = () => {
   const aPin3       = $('<a>',{href:'#',class:'aPin3'});
   const aPin4       = $('<a>',{href:'#',class:'aPin4'})
   const pin         = $('<img>',{src:'images/pinterest-logo.png',style:'width:30px; height:30px',class:'pin'});
-  const pin2        = $('<img>',{src:'images/icon-profile.png',style:'width:30px; height:30px',class:'pin2'});
-  const pin3        = $('<img>',{src:'images/hamburguer.jpg',style:'width:30px; height:30px',class:'pin3'});
+  const pin2        = $('<img>',{src:'images/icon-arrow.png',style:'width:30px; height:30px',class:'pin2'});
+  const pin3        = $('<img>',{src:'images/icon-profile.png',style:'width:30px; height:30px',class:'pin3'});
   const pin4        = $('<img>',{src:'images/message.png',style:'width:30px; height:30px',class:'pin4'})
-  const textPin     = $('<span>',{text:'Inicio',class:'textPin'});
-  const textPin2    = $('<span>',{text:'Guardado',class:'textPin2'});
   const inputPin    = $('<input>',{type:'text',placeholder:'Buscar'});
   const hr          = $('<hr>',{class:'hr'});
 
@@ -34,9 +32,7 @@ const Header = () => {
    liPin4.append(aPin3);
    liPin5.append(aPin4);
    aPin1.append(pin);
-   aPin1.append(textPin);
    aPin2.append(pin2);
-   aPin2.append(textPin2);
    aPin3.append(pin3);
    aPin4.append(pin4);
    nav.append(ulPin);
