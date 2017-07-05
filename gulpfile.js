@@ -43,7 +43,7 @@ gulp.task("sass", function () {
 gulp.task("js", function () {
   gulp.src(sources.rootJS)
       .pipe(browserify())
-      .pipe(rename("bundle.js"))
+      .pipe(rename("app.js"))
       .pipe(gulp.dest(config.dist + paths.assets + "js"));
 });
 
