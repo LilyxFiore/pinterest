@@ -7,7 +7,8 @@ const app = express();
 // y que se muestren al llamar a la ruta '/'
 app.use('/', express.static('public'));
 
-//aquí le decimos al framework desde ue puerto
-app.listen(3000, ()=>{
-  console.log("listening on 3000");
+
+app.set('port', (process.env.PORT || 5000));
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
