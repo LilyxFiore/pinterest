@@ -18,7 +18,13 @@
   position: fixed;
   height: 45px;
   padding-top: 1%;
-  z-index: +3;
+  z-index: +6;
+  background-color: #fff; }
+
+.div-icons-big {
+  width: 100%;
+  position: fixed;
+  height: 45px;
   background-color: #fff; }
 
 .div-text {
@@ -92,37 +98,25 @@ hr {
     width: 80%; }
 
   .div-text {
-    margin-top: 11%; }
-
-  .liPin2 {
-    display: none; } }
+    margin-top: 11%; } }
 @media (min-width: 320px) {
   input {
     width: 100%; }
 
   .div-text {
-    margin-top: 35%; }
-
-  .liPin2 {
-    display: none; } }
+    margin-top: 35%; } }
 @media (min-width: 360px) {
   input {
     width: 100%; }
 
   .div-text {
-    margin-top: 30%; }
-
-  .liPin2 {
-    display: none; } }
+    margin-top: 30%; } }
 @media (min-width: 414px) {
   input {
     width: 100%; }
 
   .div-text {
-    margin-top: 30%; }
-
-  .liPin2 {
-    display: none; } }
+    margin-top: 30%; } }
 @media (min-width: 768px) {
   input {
     width: 100%; }

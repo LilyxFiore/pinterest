@@ -20,9 +20,10 @@ const Header = () => {
   const inputPin    = $('<input>',{type:'text',placeholder:'Buscar',class:''});
   const hr          = $('<hr>',{class:'hr'});
   const divIcons    = $('<div>',{class:'div-icons'});
-  const icon1       = $('<img>',{src:'images/pencil.png'});
-  const icon2       = $('<img>',{src:'images/arrow.png'});
-  const icon3       = $('<img>',{src:'images/more.png'});
+  const divIconsBig = $('<div>',{class:'div-icons-big'})
+  const icon1       = $('<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>');
+  const icon2       = $('<i class="fa fa-arrows fa-2x" aria-hidden="true"></i>');
+  const icon3       = $('<i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i>');
   const divText     = $('<div>',{class:'div-text'});
   const pPines      = $('<p><strong>27</strong> Pines</p>');
   const pFoll       = $('<p><strong>74</strong> Seguidores</p>');
@@ -46,12 +47,13 @@ const Header = () => {
    divIcons.append(icon1);
    divIcons.append(icon2);
    divIcons.append(icon3);
+   divIconsBig.append(divIcons);
    divText.append(pWeb);
    divText.append(pPines);
    divText.append(pFoll);
    nav.append(ulPin);
    nav.append(hr);
-   nav.append(divIcons);
+   nav.append(divIconsBig);
    nav.append(divText);
    header.append(nav);
    header.append(divText);

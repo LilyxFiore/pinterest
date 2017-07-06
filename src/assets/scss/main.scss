@@ -30,7 +30,14 @@ $background-input-hr: #EFEFEF;
   position: fixed;
   height: 45px;
   padding-top: 1%;
-  z-index: +3;
+  z-index: +6;
+  background-color: #fff;
+}
+
+.div-icons-big{
+  width: 100%;
+  position: fixed;
+  height: 45px;
   background-color: #fff;
 }
 
@@ -120,9 +127,7 @@ hr{
   .div-text{
     margin-top: 11%;
   }
-  .liPin2{
-    display: none;
-  }
+
 }
 
 @media (min-width: 320px){
@@ -132,9 +137,7 @@ hr{
   .div-text{
     margin-top: 35%;
   }
-  .liPin2{
-    display: none;
-  }
+
 }
 
 @media (min-width: 360px){
@@ -144,9 +147,7 @@ hr{
   .div-text{
     margin-top: 30%;
   }
-  .liPin2{
-    display: none;
-  }
+
 }
 
 @media (min-width: 414px){
@@ -156,9 +157,7 @@ hr{
   .div-text{
     margin-top: 30%;
   }
-  .liPin2{
-    display: none;
-  }
+
 }
 
 @media (min-width: 768px){
