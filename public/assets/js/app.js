@@ -41,11 +41,11 @@ const Header = () => {
   const aPin1       = $('<a>',{href:'#',class:'aPin1'});
   const aPin2       = $('<a>',{href:'#',class:'aPin2'});
   const aPin3       = $('<a>',{href:'#',class:'aPin3'});
-  const aPin4       = $('<a>',{href:'#',class:'aPin4'})
+  const aPin4       = $('<a>',{href:'#',class:'aPin4'});
   const pin         = $('<img>',{src:'assets/images/pinterest-logo.png',style:'width:30px; height:30px',class:'pin'});
   const pin2        = $('<img>',{src:'assets/images/icon-arrow.png',style:'width:30px; height:30px',class:'pin2'});
   const pin3        = $('<img>',{src:'assets/images/icon-profile.png',style:'width:30px; height:30px',class:'pin3'});
-  const pin4        = $('<img>',{src:'assets/images/message.png',style:'width:30px; height:30px',class:'pin4'})
+  const pin4        = $('<img>',{src:'assets/images/message.png',style:'width:30px; height:30px',class:'pin4'});
   const inputPin    = $('<input>',{type:'text',placeholder:'Buscar',class:''});
   const hr          = $('<hr>',{class:'hr'});
   const divIcons    = $('<div>',{class:'nav__icons'});
