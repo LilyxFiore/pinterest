@@ -4,6 +4,7 @@
 const token = "AeQ7ekzAKmhr7pvDPpa00Xn5XZctFM4mjWCOA41EItrZVaA9_AAAAAA";
 const urlBoard = "arabelyuska/web-ui";
 
+const wrapper = $('<id class="wrapper"></id>');
 const board = $('<section class="board"></section>');
 
 $.getJSON('https://api.pinterest.com/v1/boards/' + urlBoard +'/pins/?access_token=' + token +'&fields=link%2Cnote%2Cimage%2Cboard', function (response){
@@ -22,4 +23,7 @@ function addImages(data) {
 
   return boardItem;
 }
+
+$('#root').append(wrapper);
+wrapper.append(board);
 },{}]},{},[1])
