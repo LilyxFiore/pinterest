@@ -148,13 +148,15 @@ $max-height:100vh;
     background: $bg__modal;
     z-index: 500;
     position: absolute;
+    padding-top: 2em;
+    overflow: auto;
     &__contentModal{
         background: $bg__modal--content;
         width: 50%;
-        margin: 40px auto;
         flex-direction: column;
         padding: 5px;
         border-radius: 10px;
+        position: absolute;
     }
     &__header{
         width: 100%;
@@ -173,12 +175,10 @@ $max-height:100vh;
     }
     &__image{
         width:90%;
-        margin: 0 auto;
-        position: relative;
+        margin: auto;
         &--border{
             border-radius: 20px;
             width: 100%;
-            position: absolute;
         }
     }
     &__close{
@@ -199,7 +199,6 @@ $max-height:100vh;
     }
     &__pin{
         width: 100%;
-        height: auto;
     }
 }
 
@@ -394,7 +393,10 @@ hr{
   }
   .modal__contentModal{
     width: 70%;
-  } 
+  }
+  .liPin2{
+    display: inline-block;
+  }
 }
 
 @media (min-width: 992px){

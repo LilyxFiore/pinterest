@@ -88,8 +88,8 @@ const Header = () => {
  return header;
 }
 const Modal = () => {
-    const contenedor =  $('<div id="modal" class="modal flex flex__justify-between"></div>');
-    const contTotal = $('<div class="modal__contentModal"></div>');
+    const contenedor =  $('<div id="modal" class="modal flex flex__justify-center"></div>');
+    const contTotal = $('<div class="modal__contentModal "></div>');
     const contData =  $('<div class="modal__pin"></div>');
     
     const note =  $('<div"><h1 id="note" class="modal__header--fonts modal__note"></h1></div>');
@@ -122,6 +122,7 @@ const Modal = () => {
     
     close.on('click', ()=>{
       contenedor.hide();
+      $('body').css('overflow','auto');
     });
 
             
@@ -145,6 +146,7 @@ $('#root').append(Modal());
   function showModal(src,data){
       const modal = $('#modal');
       modal.show();
+      $('body').css('overflow','hidden');
       $('#imageModal').attr('src', src);
       $('#note').html(data);
   }
