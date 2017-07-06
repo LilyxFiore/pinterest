@@ -63,7 +63,7 @@ input[type=text] {
   border-radius: 4px;
   font-size: 16px;
   background-color: #EFEFEF;
-  background-image: url("../../images/search.png");
+  background-image: url("../../../public/assets/images/search.png");
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 10px 20px 10px 40px;

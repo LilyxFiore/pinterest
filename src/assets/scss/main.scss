@@ -280,7 +280,7 @@ input[type=text] {
     border-radius: 4px;
     font-size: 16px;
     background-color: $background-input-hr;
-    background-image: url('../../images/search.png');
+    background-image: url('../../../public/assets/images/search.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 10px 20px 10px 40px;
@@ -320,6 +320,10 @@ hr{
   }
   .liPin2{
     display: none;
+  }
+
+  .modal__contentModal{
+    width: 90%;
   }
 }
 
@@ -450,4 +454,8 @@ hr{
   } #close{
     display: block;
   }
+}
+
+header{
+  height: 250px;
 }
