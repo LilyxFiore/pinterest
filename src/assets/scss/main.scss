@@ -1,6 +1,8 @@
 
 *{
   font-family: "Helvetica";
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -68,7 +70,7 @@
   .board{
     column-count: 5;
   }
-
+}
     
 /*COLOR FONT*/
 $color--black:#555555;
@@ -120,13 +122,14 @@ $max-height:100vh;
 /*EH creado un minifado que aplica a todos los botones*/
 .btn{
     &__guardar{
-        @include buttons($bg__btn--guardar,10px 15px,$color--white,1em,4%,10px);
+        @include buttons($bg__btn--guardar,10px 15px,$color--white,1em,4%,5px);
     }
     &__secondary{
         @include buttons($bg__btn--default,9px 12px,$color--black,1em,6%,10px);
     }
     &__icons{
-        @include buttons(white,15px 20px,$color--icons,1.5em,10%,50%);
+        @include buttons(white,10px 15px,$color--icons,1.5em,10%,50%);
+        margin: 5px;
     }
     &--pad{
        margin-left: 5px; 
@@ -154,42 +157,74 @@ $max-height:100vh;
 
 /*MEDIA QUERY MOBILE VERSION*/
 
+@mixin font($font,$bold,$color){
+    font-size: $font;
+    font-weight: $bold;
+}
+
+
 .modal{
+    top: 0px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: $bg__modal;
-    z-index: 1000;
-    position: fixed;
+    z-index: 500;
+    position: absolute;
     &__contentModal{
         background: $bg__modal--content;
-        width: 70%;
+        width: 50%;
+        margin: 40px auto;
         flex-direction: column;
-        padding: 35px 35px;
+        padding: 5px;
+        border-radius: 10px;
     }
     &__header{
         width: 100%;
-        padding: 35px 35px;
+        padding: 20px 10px;
+        z-index: 700;
+        background: $bg__modal--content;
+        position: relative;
         &--button{
             left: auto;
-            right: 0px;
+            right: 25px;
+            position: absolute;
+        }
+        &--fonts{
+         @include font(21px,bold,$color--black);   
+        }
+    }
+    &__image{
+        width:90%;
+        margin: 0 auto;
+        position: relative;
+        &--border{
+            border-radius: 20px;
+            width: 100%;
+            position: absolute;
         }
     }
     &__close{
         font-size: 2em;
         position: fixed;
-        padding: 50px;
-        top: 50px;
+        top: 20px;
         right: 50px;
+        color: $color--icons;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            color: $color--black;
+        }
     }
     &__note{
-        font-weight: 800,
+        font-weight: 500;
+        padding: 0.8em 1em;
     }
     &__pin{
         width: 100%;
         height: auto;
-        &--imagen{
-            width: 100%;
-            height: auto;
-        }
     }
+}
+
+@media (min-width: 0px){
+    
 }
