@@ -2,7 +2,7 @@
 
 const Header = () => {
   const header      = $('<header></header>');
-  const nav         = $('<nav>',{class:'nav column-md-12'});
+  const nav         = $('<nav>',{class:'nav'});
   const ulPin       = $('<ul>',{class:'ulPin'});
   const liPin1      = $('<li>',{class:'liPin1'});
   const liPin2      = $('<li>',{class:'liPin2'});
@@ -19,7 +19,14 @@ const Header = () => {
   const pin4        = $('<img>',{src:'images/message.png',style:'width:30px; height:30px',class:'pin4'})
   const inputPin    = $('<input>',{type:'text',placeholder:'Buscar',class:''});
   const hr          = $('<hr>',{class:'hr'});
- 
+  const divIcons    = $('<div>',{class:'div-icons'});
+  const icon1       = $('<img>',{src:'images/pencil.png'});
+  const icon2       = $('<img>',{src:'images/arrow.png'});
+  const icon3       = $('<img>',{src:'images/more.png'});
+  const divText     = $('<div>',{class:'div-text'});
+  const pPines      = $('<p><strong>27</strong> Pines</p>');
+  const pFoll       = $('<p><strong>74</strong> Seguidores</p>');
+  const pWeb        = $('<p>',{text:'Web UI',class:'p-1'});
 
 
    ulPin.append(liPin1);
@@ -36,8 +43,18 @@ const Header = () => {
    aPin2.append(pin2);
    aPin3.append(pin3);
    aPin4.append(pin4);
+   divIcons.append(icon1);
+   divIcons.append(icon2);
+   divIcons.append(icon3);
+   divText.append(pWeb);
+   divText.append(pPines);
+   divText.append(pFoll);
    nav.append(ulPin);
    nav.append(hr);
+   nav.append(divIcons);
+   nav.append(divText);
    header.append(nav);
+   header.append(divText);
+
  return header;
 }
