@@ -58,7 +58,7 @@ const Header = () => {
   header.append(divText);
 
   return header;
-}
+};
 
 const wrapper = $('<div class="wrapper"></div>');
 const board = $('<section class="board"></section>');
@@ -131,7 +131,7 @@ const Modal = () => {
 
             
     return contenedor;
-}
+};
 
 wrapper.append(Header());
 wrapper.append(board);

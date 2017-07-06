@@ -1,34 +1,6 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-/** section board js **/
-const token = "AeQ7ekzAKmhr7pvDPpa00Xn5XZctFM4mjWCOA41EItrZVaA9_AAAAAA";
-const urlBoard = "arabelyuska/web-ui";
-
-const wrapper = $('<div class="wrapper"></div>');
-const board = $('<section class="board"></section>');
-
-$.getJSON('https://api.pinterest.com/v1/boards/' + urlBoard +'/pins/?access_token=' + token +'&fields=link%2Cnote%2Cimage%2Cboard', function (response){
-  $.each(response.data, function(i, value) {
-    $(".board").append(addImages(value));
-  });
-});
-
-function addImages(data) {
-  const boardItem = $('<div class="board-item"></div>');
-  const boardItemImage = $('<img src =' + data.image.original.url +' class="board-item__image">');
-  const boardItemTitle = $('<p class="board-item__title">' + data.note + '</p>');
-
-  boardItem.append(boardItemImage);
-  boardItem.append(boardItemTitle);
-
-  boardItem.on('click', (e)=>{
-      showModal(data.image.original.url,data.note);
-  });
-  
-  return boardItem;
-}
-
+//** section header **/
 const Header = () => {
   const header      = $('<header></header>');
   const nav         = $('<nav>',{class:'nav'});
@@ -58,35 +30,67 @@ const Header = () => {
   const pWeb        = $('<p>',{text:'Web UI',class:'p-1'});
 
 
-   ulPin.append(liPin1);
-   ulPin.append(liPin2);
-   ulPin.append(liPin3);
-   ulPin.append(liPin4);
-   ulPin.append(liPin5);
-   liPin1.append(aPin1);
-   liPin2.append(inputPin);
-   liPin3.append(aPin2);
-   liPin4.append(aPin3);
-   liPin5.append(aPin4);
-   aPin1.append(pin);
-   aPin2.append(pin2);
-   aPin3.append(pin3);
-   aPin4.append(pin4);
-   divIcons.append(icon1);
-   divIcons.append(icon2);
-   divIcons.append(icon3);
-   divText.append(pWeb);
-   divText.append(pPines);
-   divText.append(pFoll);
-   nav.append(ulPin);
-   nav.append(hr);
-   nav.append(divIcons);
-   nav.append(divText);
-   header.append(nav);
-   header.append(divText);
+  ulPin.append(liPin1);
+  ulPin.append(liPin2);
+  ulPin.append(liPin3);
+  ulPin.append(liPin4);
+  ulPin.append(liPin5);
+  liPin1.append(aPin1);
+  liPin2.append(inputPin);
+  liPin3.append(aPin2);
+  liPin4.append(aPin3);
+  liPin5.append(aPin4);
+  aPin1.append(pin);
+  aPin2.append(pin2);
+  aPin3.append(pin3);
+  aPin4.append(pin4);
+  divIcons.append(icon1);
+  divIcons.append(icon2);
+  divIcons.append(icon3);
+  divText.append(pWeb);
+  divText.append(pPines);
+  divText.append(pFoll);
+  nav.append(ulPin);
+  nav.append(hr);
+  nav.append(divIcons);
+  nav.append(divText);
+  header.append(nav);
+  header.append(divText);
 
- return header;
+  return header;
+};
+
+const wrapper = $('<div class="wrapper"></div>');
+const board = $('<section class="board"></section>');
+
+/** section board js **/
+const token = "AeQ7ekzAKmhr7pvDPpa00Xn5XZctFM4mjWCOA41EItrZVaA9_AAAAAA";
+const urlBoard = "arabelyuska/web-ui";
+
+
+$.getJSON('https://api.pinterest.com/v1/boards/' + urlBoard +'/pins/?access_token=' + token +'&fields=link%2Cnote%2Cimage%2Cboard', function (response){
+  $.each(response.data, function(i, value) {
+    $(".board").append(addImages(value));
+  });
+});
+
+
+function addImages(data) {
+  const boardItem = $('<div class="board-item"></div>');
+  const boardItemImage = $('<img src =' + data.image.original.url +' class="board-item__image">');
+  const boardItemTitle = $('<p class="board-item__title">' + data.note + '</p>');
+
+  boardItem.append(boardItemImage);
+  boardItem.append(boardItemTitle);
+
+  boardItem.on('click', (e)=>{
+      showModal(data.image.original.url,data.note);
+  });
+  
+  return boardItem;
 }
+
+
 const Modal = () => {
     const contenedor =  $('<div id="modal" class="modal flex flex__justify-center"></div>');
     const contTotal = $('<div class="modal__contentModal "></div>');
@@ -127,7 +131,7 @@ const Modal = () => {
 
             
     return contenedor;
-}
+};
 
 wrapper.append(Header());
 wrapper.append(board);
@@ -143,13 +147,13 @@ $('#root').append(Modal());
 
   $('#modal').hide();
 
-  function showModal(src,data){
+function showModal(rutaimage,data){
       const modal = $('#modal');
       modal.show();
       $('body').css('overflow','hidden');
-      $('#imageModal').attr('src', src);
+      $('#imageModal').attr('src', rutaimage);
       $('#note').html(data);
-  }
+}
 
 
-},{}]},{},[1])
+}
