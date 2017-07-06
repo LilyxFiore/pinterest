@@ -1,10 +1,8 @@
-
 *{
   font-family: "Helvetica";
   padding: 0;
   margin: 0;
 }
-
 
 /** section board **/
 .board{
@@ -66,8 +64,8 @@
   }
 }
 
-@media (min-width: 1000px){
-  .board{
+@media (min-width: 1000px) {
+  .board {
     column-count: 5;
   }
 }
@@ -156,6 +154,7 @@ $max-height:100vh;
 }
 
 /*MEDIA QUERY MOBILE VERSION*/
+
 
 @mixin font($font,$bold,$color){
     font-size: $font;
