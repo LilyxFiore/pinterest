@@ -20,9 +20,9 @@
   "author": "Liliana",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LilyxFiore/49-guiado-gulp/issues"
+    "url": "https://github.com/LilyxFiore/pinterest/issues"
   },
-  "homepage": "https://github.com/LilyxFiore/49-guiado-gulp#readme",
+  "homepage": "https://github.com/LilyxFiore/pinterest/#readme",
   "dependencies": {
     "express": "^4.15.3"
   },
